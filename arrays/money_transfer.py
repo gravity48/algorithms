@@ -17,9 +17,11 @@ class Solution:
                 index2 -= 1
                 index1 += 1
             if diff < 0:
+                mass[index2] = 0
                 index2 -= 1
                 mass[index1] = diff
             if diff > 0:
+                mass[index1] = 0
                 index1 += 1
                 mass[index2] = diff
             count += 1
@@ -77,6 +79,6 @@ class Solution3:
 
 if __name__ == '__main__':
     mass = [0, 500, 1200, 2300]
-    Solution().transfer([0, 500, 1200, 2300])
+    Solution().transfer([5000, 500, 0, 0])
     Solution2().transfer([0, 500, 1200, 2300])
     Solution3().transfer([0, 500, 1200, 2300])
