@@ -14,4 +14,4 @@ class Solution:
 
 
 if __name__ == '__main__':
-    Solution().findPeakElement([1, 2, 3, 1])
+    Solution().findPeakElement([1, 2, 3, 1, 2, 3])
