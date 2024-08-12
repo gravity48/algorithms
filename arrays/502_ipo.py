@@ -1,5 +1,5 @@
 from typing import List
-import heapq
+import heapq_sol
 
 
 class Solution:
@@ -37,12 +37,11 @@ class BestSolution:
         i = 0
         for _ in range(k):
             while i < n and projects[i][0] <= w:
-                heapq.heappush(maxHeap, -projects[i][1])
+                heapq_sol.heappush(maxHeap, -projects[i][1])
                 i += 1
             if not maxHeap:
                 break
-            w -= heapq.heappop(maxHeap)
-
+            w -= heapq_sol.heappop(maxHeap)
         return w
 
 
