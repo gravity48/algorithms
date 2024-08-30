@@ -28,9 +28,10 @@ class Edge:
 class Graph:
     nodes: List[Node] = list()
     edges = []
+
     def loadFromMatrix(self, filename: str):
         f = open(filename)
-        N, M = map(int,f.readline().split())
+        N, M = map(int, f.readline().split())
         for n in range(N):
             node = Node()
             node.n = n
