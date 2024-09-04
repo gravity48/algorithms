@@ -88,4 +88,5 @@ class Solution:
 
 
 if __name__ == '__main__':
-    Solution().minMutation("AACCGGTT", "AAACGGTA", ["AACCGATT", "AACCGATA", "AAACGATA", "AAACGGTA"])
+    Solution().minMutation("AACCGGTT", "AAACGGTA",
+                           ["AACCGATT", "AACCGATA", "AAACGATA", "AAACGGTA"])
