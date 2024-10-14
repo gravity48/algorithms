@@ -47,6 +47,33 @@ class BestSolution(object):
             k -= 1
 
 
+class NewSolution:
+    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+        """
+        Do not return anything, modify nums1 in-place instead.
+        """
+        index1 = m - 1
+        index2 = n - 1
+        local_index = m + n - 1
+        while index1 > -1 or index2 > -1:
+            if index1 > -1 and index2 > -1 and nums1[index1] >= nums2[index2]:
+                nums1[local_index] = nums1[index1]
+                index1 -= 1
+            elif index1 > -1 and index2 > -1 and nums1[index1] < nums2[index2]:
+                nums1[local_index] = nums2[index2]
+                index2 -= 1
+            elif index2 == 0:
+                return
+            else:
+                nums1[local_index] = nums2[index2]
+                index2 -= 1
+            local_index -= 1
+
+
+if __name__ == '__main__':
+    NewSolution().merge([0], 0, [1], 1)
+
+
 class TestSolution:
 
     def test_01(self):
@@ -54,7 +81,7 @@ class TestSolution:
         m = 3
         nums2 = [2, 5, 6]
         n = 3
-        Solution().merge(nums1, m, nums2, n)
+        NewSolution().merge(nums1, m, nums2, n)
         assert nums1 == [1, 2, 2, 3, 5, 6]
 
     def test_02(self):
