@@ -24,4 +24,4 @@ class Solution:
 
 
 if __name__ == '__main__':
-    Solution().successfulPairs([3,1,2], [8, 5, 8], 16)
+    Solution().successfulPairs([3, 1, 2], [8, 5, 8], 16)
